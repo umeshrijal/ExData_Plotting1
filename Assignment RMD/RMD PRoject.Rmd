@@ -7,7 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-  echo = TRUE,
+  echo = FALSE,
   warning = FALSE,
   message = FALSE
 )
@@ -41,7 +41,6 @@ landmarks <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# Create interactive map
 leaflet(data = landmarks) %>%
   addTiles() %>%
   setView(
