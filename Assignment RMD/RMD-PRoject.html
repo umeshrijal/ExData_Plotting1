@@ -4418,47 +4418,8 @@ display: none;
 </div>
 
 
-<pre class="r"><code># Kathmandu landmarks
-landmarks &lt;- data.frame(
-  name = c(
-    &quot;Swayambhunath (Monkey Temple)&quot;,
-    &quot;Pashupatinath Temple&quot;,
-    &quot;Boudhanath Stupa&quot;
-  ),
-  lat = c(
-    27.7149,
-    27.7104,
-    27.7215
-  ),
-  lng = c(
-    85.2903,
-    85.3487,
-    85.3620
-  ),
-  popup = c(
-    &quot;&lt;b&gt;Swayambhunath&lt;/b&gt;&lt;br&gt;Ancient Buddhist stupa overlooking Kathmandu.&quot;,
-    &quot;&lt;b&gt;Pashupatinath Temple&lt;/b&gt;&lt;br&gt;One of the holiest Hindu temples in Nepal.&quot;,
-    &quot;&lt;b&gt;Boudhanath Stupa&lt;/b&gt;&lt;br&gt;One of the largest Buddhist stupas in the world.&quot;
-  ),
-  stringsAsFactors = FALSE
-)
-
-# Create interactive map
-leaflet(data = landmarks) %&gt;%
-  addTiles() %&gt;%
-  setView(
-    lng = 85.3260,
-    lat = 27.7160,
-    zoom = 12
-  ) %&gt;%
-  addMarkers(
-    lng = ~lng,
-    lat = ~lat,
-    popup = ~popup,
-    label = ~name
-  )</code></pre>
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-e1d1a4c2ea83b58062b1" style="width:672px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-e1d1a4c2ea83b58062b1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[[27.7149,27.7104,27.7215],[85.2903,85.34869999999999,85.36199999999999],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<b>Swayambhunath<\/b><br>Ancient Buddhist stupa overlooking Kathmandu.","<b>Pashupatinath Temple<\/b><br>One of the holiest Hindu temples in Nepal.","<b>Boudhanath Stupa<\/b><br>One of the largest Buddhist stupas in the world."],null,null,null,["Swayambhunath (Monkey Temple)","Pashupatinath Temple","Boudhanath Stupa"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[27.716,85.32599999999999],12,[]],"limits":{"lat":[27.7104,27.7215],"lng":[85.2903,85.36199999999999]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-72d6691295ff140b6c6d" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-72d6691295ff140b6c6d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[[27.7149,27.7104,27.7215],[85.2903,85.34869999999999,85.36199999999999],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<b>Swayambhunath<\/b><br>Ancient Buddhist stupa overlooking Kathmandu.","<b>Pashupatinath Temple<\/b><br>One of the holiest Hindu temples in Nepal.","<b>Boudhanath Stupa<\/b><br>One of the largest Buddhist stupas in the world."],null,null,null,["Swayambhunath (Monkey Temple)","Pashupatinath Temple","Boudhanath Stupa"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[27.716,85.32599999999999],12,[]],"limits":{"lat":[27.7104,27.7215],"lng":[85.2903,85.36199999999999]}},"evals":[],"jsHooks":[]}</script>
 
 
 
