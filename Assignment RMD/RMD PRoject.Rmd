@@ -1,0 +1,58 @@
+---
+title: "Interactive Leaflet Map of Kathmandu"
+author: "Umesh Rijal"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+
+library(leaflet)
+```
+
+```{r}
+# Kathmandu landmarks
+landmarks <- data.frame(
+  name = c(
+    "Swayambhunath (Monkey Temple)",
+    "Pashupatinath Temple",
+    "Boudhanath Stupa"
+  ),
+  lat = c(
+    27.7149,
+    27.7104,
+    27.7215
+  ),
+  lng = c(
+    85.2903,
+    85.3487,
+    85.3620
+  ),
+  popup = c(
+    "<b>Swayambhunath</b><br>Ancient Buddhist stupa overlooking Kathmandu.",
+    "<b>Pashupatinath Temple</b><br>One of the holiest Hindu temples in Nepal.",
+    "<b>Boudhanath Stupa</b><br>One of the largest Buddhist stupas in the world."
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Create interactive map
+leaflet(data = landmarks) %>%
+  addTiles() %>%
+  setView(
+    lng = 85.3260,
+    lat = 27.7160,
+    zoom = 12
+  ) %>%
+  addMarkers(
+    lng = ~lng,
+    lat = ~lat,
+    popup = ~popup,
+    label = ~name
+  )
+```
